@@ -1,5 +1,6 @@
 ﻿using Customers.Contracts;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Ropositories.Models;
 using SOLID.Framwork;
 
@@ -14,7 +15,7 @@ namespace Customer.QueryHandlers
         }
         public async Task<Result<EmployeeResult>> Handle(EmployeeQuery request, CancellationToken cancellationToken)
         {
-            var entity = await _northwindContext.Employees.Where(e => e.FirstName == "Nancy").FirstOrDefaultAsync();
+            var entity = await _northwindContext.Employees.Where(e => e.FirstName == "Nancy").FirstOrDefaultAsync(cancellationToken);
 
             Result<EmployeeResult> obj = new Result<EmployeeResult>();
 
