@@ -1,0 +1,15 @@
+<Solution>
+  <Project Path="AngularAPP/AngularAPP.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Customer.QueryHandlers/Employee.QueryHandlers.csproj" />
+  <Project Path="Customers.Contracts/Employee.Contracts.csproj" />
+  <Project Path="NorthWind/NorthWind.csproj" />
+  <Project Path="ReactTS/reactts.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Ropositories/Ropositories.csproj" />
+  <Project Path="SOLID.Framwork/SOLID.Framwork.csproj" />
+</Solution>
