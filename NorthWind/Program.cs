@@ -1,11 +1,21 @@
 using Microsoft.EntityFrameworkCore;
+using NorthWind;
 using Ropositories.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddDbContext<NorthwindContext>(options =>
+builder.Services.AddPooledDbContextFactory<NorthwindContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services
+    .AddGraphQLServer()
+    .AddQueryType<Query>()
+      .AddProjections() // Ensure this is registered
+    .AddFiltering()
+    .AddSorting();
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -19,7 +29,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
         ));
 
 var app = builder.Build();
-
+app.MapGraphQL();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
