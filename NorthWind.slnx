@@ -5,6 +5,7 @@
   </Project>
   <Project Path="Customer.QueryHandlers/Employee.QueryHandlers.csproj" />
   <Project Path="Customers.Contracts/Employee.Contracts.csproj" />
+  <Project Path="Graphql/Graphql.csproj" Id="cb85d20c-d7ef-477c-997e-beed90096930" />
   <Project Path="NorthWind/NorthWind.csproj" />
   <Project Path="ReactTS/reactts.esproj">
     <Build />

@@ -10,12 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPooledDbContextFactory<NorthwindContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services
-    .AddGraphQLServer()
-    .AddQueryType<Query>()
-      .AddProjections() // Ensure this is registered
-    .AddFiltering()
-    .AddSorting();
+
 
 
 
