@@ -3,6 +3,7 @@ using Customers.Contracts;
 using Microsoft.EntityFrameworkCore;
 using NorthWind;
 using Ropositories.Models;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,8 @@ builder.Services.AddPooledDbContextFactory<NorthwindContext>(options =>
 
 
 
-
+// 2. Register native .NET OpenAPI support
+builder.Services.AddOpenApi();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -33,8 +35,17 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+    
 }
+// 3. Configure the HTTP request pipeline
+if (app.Environment.IsDevelopment())
+{
+    // Generates the OpenAPI JSON schema at /openapi/v1.json
+    app.MapOpenApi();
 
+    // Renders the modern, interactive Scalar documentation UI
+    app.MapScalarApiReference();
+}
 app.UseHttpsRedirection();
 app.UseRouting();
 
