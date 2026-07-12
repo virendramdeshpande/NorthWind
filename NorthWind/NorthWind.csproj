@@ -20,6 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Customer.QueryHandlers\Employee.QueryHandlers.csproj" />
+    <ProjectReference Include="..\Customers.Contracts\Employee.Contracts.csproj" />
     <ProjectReference Include="..\Ropositories\Ropositories.csproj" />
   </ItemGroup>
 

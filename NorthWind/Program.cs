@@ -1,3 +1,5 @@
+using Customer.QueryHandlers;
+using Customers.Contracts;
 using Microsoft.EntityFrameworkCore;
 using NorthWind;
 using Ropositories.Models;
@@ -21,11 +23,11 @@ builder.Services
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
-    typeof(NorthwindContext).Assembly
-    //typeof(CustomerQueryHandle).Assembly,
-     //typeof(EmployeeQuery).Assembly,
-     /// typeof(EmployeeQueryHandle).Assembly,
-    //typeof(Result<>).Assembly
+    typeof(NorthwindContext).Assembly,
+    typeof(EmployeeQuery).Assembly,
+     typeof(EmployeeQueryHandle).Assembly,
+        typeof(NorthwindContext).Assembly,
+        typeof(Result<>).Assembly
         ));
 
 var app = builder.Build();
