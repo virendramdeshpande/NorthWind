@@ -26,7 +26,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
         ));
 
 var app = builder.Build();
-app.MapGraphQL();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

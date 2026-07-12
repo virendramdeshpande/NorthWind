@@ -13,4 +13,5 @@
   </Project>
   <Project Path="Ropositories/Ropositories.csproj" />
   <Project Path="SOLID.Framwork/SOLID.Framwork.csproj" />
+  <Project Path="WebApi/WebApi.csproj" Id="1f0b2787-06ab-429a-84cc-49091da7c77b" />
 </Solution>
