@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { CustomerComponent } from './app/customer/customer.component';
+import { CustomerComponent } from './app/shared/components/customer/customer';
 
 
 export const routes: Routes = [
