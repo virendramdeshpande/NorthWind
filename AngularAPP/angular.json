@@ -28,18 +28,19 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+            "assets": [              
+                 "src/assets"              
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+               "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-validation/dist/jquery.validate.min.js",
+              "node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+              "node_modules/@emretulek/jbvalidator/dist/jbvalidator.min.js"
             ]
           },
           "configurations": {

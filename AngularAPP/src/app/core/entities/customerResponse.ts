@@ -12,3 +12,6 @@ export interface CustomerResponse {
   fax: string
   orders: any[]
 }
+export interface CustomerIdsListResponse {
+  customerIds: string[]
+}
