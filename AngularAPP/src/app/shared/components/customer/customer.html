@@ -1,17 +1,29 @@
 <div class="p-2"></div>
 
-<form id="myForm">
-    <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" id="name" name="name" class="form-control"
-               data-val="true" 
-               data-val-required="The Name field is required." 
-               />
-         <span data-valmsg-for="name" data-valmsg-replace="true"></span>
-    </div>
-    <button type="button" onclick="$('#myForm').validate()" class="btn btn-primary">Submit</button>
-</form>
+      <form id="myForm" method="post">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
 
+          <!-- Input element -->
+          <input type="text" class="form-control" id="username" name="username" data-val="true"
+            data-val-required="This field is required.">
+
+          <!-- Message Container: Must have matching data-valmsg-for target attribute -->
+          <span class="field-validation-valid" data-valmsg-for="username" data-valmsg-replace="true"></span>
+        </div>
+
+        <div class="mb-3">
+          <label for="company" class="form-label">Company</label>
+
+          <!-- Input element -->
+          <input type="text" class="form-control" id="company" name="company" data-val="true"
+            data-val-required="This field is required.">
+
+          <!-- Message Container: Must have matching data-valmsg-for target attribute -->
+          <span class="field-validation-valid" data-valmsg-for="company" data-valmsg-replace="true"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
 <div class="p-xl-5"></div>
 <div class="row p-2">

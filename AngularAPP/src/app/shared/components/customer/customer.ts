@@ -4,6 +4,7 @@ import { httpResource } from '@angular/common/http';
 import { CustomerIdsListResponse } from '../../../core/entities/customerResponse';
 
 declare const $: any;
+declare const initializeValidation: any;
 
 @Component({
   selector: 'app-customer',
@@ -15,9 +16,8 @@ declare const $: any;
 export class CustomerComponent implements OnInit {
 
   ngOnInit(): void {
-
-       const form = $('#myForm');
-    $.validator.unobtrusive.parse(form);
+initializeValidation();
+   
   }
 
   
