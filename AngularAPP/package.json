@@ -20,9 +20,9 @@
     "@emretulek/jbvalidator": "^1.0.9",
     "bootstrap": "^5.3.8",
     "jest-editor-support": "*",
-    "jquery": "4.0.0",
-    "jquery-validation": "1.22.1",
-    "jquery-validation-unobtrusive": "4.0.0",
+    "jquery": "^3.7.1",
+    "jquery-validation": "^1.21.0",
+    "jquery-validation-unobtrusive": "^4.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

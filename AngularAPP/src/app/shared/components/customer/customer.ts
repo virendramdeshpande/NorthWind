@@ -15,13 +15,14 @@ declare const $: any;
 export class CustomerComponent implements OnInit {
 
   ngOnInit(): void {
-  $('form').jbvalidator({
-        errorMessage: true,
-        successClass: true
-    });
 
-   
+       const form = $('#myForm');
+    $.validator.unobtrusive.parse(form);
   }
+
+  
+}
+
 
 
   //CustomerIdsResource = httpResource<CustomerIdsListResponse>(() => {
@@ -34,4 +35,4 @@ export class CustomerComponent implements OnInit {
 
 
 
-}
+
